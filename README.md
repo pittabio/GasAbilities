@@ -42,8 +42,10 @@ All Epic Games content is used under the [Unreal Engine EULA](https://www.unreal
 ###
 This project is being developed while studying from various sources (_thanks to_):
 
-- [Code With Ro](https://www.youtube.com/@CodeWithRo) - YouTube channel with extensive GAS tutorials (main learning source)
-- [The Wolf Around](https://www.youtube.com/@TheWolfAround) - YouTube channel, specifically the [Enhanced Input System tutorial](https://www.youtube.com/watch?v=HKX5xJcVDTw)
+- [Code With Ro](https://www.youtube.com/@CodeWithRo) YouTube channel - extensive GAS tutorials (main learning source)
+- [The Wolf Around](https://www.youtube.com/@TheWolfAround) YouTube channel - as a review of [Enhanced Input System tutorial](https://www.youtube.com/watch?v=HKX5xJcVDTw)
+- [Dev Kai](https://www.youtube.com/@DevKaiUnreal) YouTube channel - 
+	[Coding and Debugging](https://youtu.be/IT9ihIc9KyI?si=8DvWHbhR-5Lipc0K)
 - Various forums, documentation, and community resources
 
 ## 📝 Development Notes
