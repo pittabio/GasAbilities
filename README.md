@@ -34,6 +34,7 @@ This repository serves as:
 This project includes the following third-party content from **Epic Games**:
 - **Third Person Template**: Characters, animations, and related assets from Unreal Engine's Third Person template
 - **Starter Content**: Sample audio, particles, materials, and other assets from Unreal Engine's Starter Content pack
+- **Lyra Sample Game**: Using the **ModularGameplayActors** plugin from the Lyra project
 
 All Epic Games content is used under the [Unreal Engine EULA](https://www.unrealengine.com/en-US/eula/unreal) and is subject to Epic Games' licensing terms.
 
