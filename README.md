@@ -22,13 +22,29 @@ This repository serves as:
 - A resource for others learning GAS
 
 ## 🛠️ Technologies
-<img src="https://skillicons.dev/icons?i=unreal" height="50" alt="unrealengine logo"  /> `Unreal Engine 5.6`
+<!-- UNREAL -->
+<div>
+  <img src="https://skillicons.dev/icons?i=unreal" height="50" alt="unrealengine logo" style="vertical-align: middle;" /> 
+  <code>Unreal Engine 5.6</code>
+</div>
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rider/rider-original.svg" height="50" alt="rider logo"  /> `JetBrains Rider`
+<!-- RIDER -->
+<div>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rider/rider-original.svg" height="50" alt="rider logo" style="vertical-align: middle;" />
+  <code>JetBrains Rider</code>
+</div>
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="50" alt="cplusplus logo"  /> `C++` `Blueprint`
+<!-- CODE -->
+<div>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="50" alt="cplusplus logo" style="vertical-align: middle;"  />
+  <code>C++</code> <code>Blueprint</code>
+</div>
 
-<img src="https://cdn.simpleicons.org/git/F05032" height="50" alt="git logo"  /> `Git` `GitKraken Desktop`
+<!-- GIT -->
+<div>
+  <img src="https://cdn.simpleicons.org/git/F05032" height="50" alt="git logo" style="vertical-align: middle;" /> 
+  <code>Git</code> <code>GitKraken Desktop</code>
+</div>
 
 ## 📦 Contents
 > **Note:** This section will be updated as the project develops.
