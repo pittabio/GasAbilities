@@ -22,10 +22,13 @@ This repository serves as:
 - A resource for others learning GAS
 
 ## 🛠️ Technologies
-`Unreal Engine 5.6`
-`JetBrains Rider`
-`C++` `Blueprint`
-`Git` `GitKraken Desktop`
+<img src="https://skillicons.dev/icons?i=unreal" height="80" alt="unrealengine logo"  /> `Unreal Engine 5.6`
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rider/rider-original.svg" height="50" alt="rider logo"  /> `JetBrains Rider`
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="50" alt="cplusplus logo"  /> `C++` `Blueprint`
+
+<img src="https://cdn.simpleicons.org/git/F05032" height="50" alt="git logo"  /> `Git` `GitKraken Desktop`
 
 ## 📦 Contents
 > **Note:** This section will be updated as the project develops.
