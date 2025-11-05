@@ -6,27 +6,30 @@
 #include "GameFramework/PlayerController.h"
 #include "InputMappingContext.h"
 #include "InputAction.h"
-#include "GasCharacterControllerBase.generated.h"
+#include "GasControllerBase.generated.h"
 
 class AGasCharacterBase;
 struct FInputActionValue;
 
 /**
- * AGasCharacterController is the Player Controller used for the main playable character in the project.
- * It is responsible for handling player input and **binding Ability inputs** to the 
- * Character's Gameplay Ability System (GAS). 
- * This controller manages the flow of commands and replication necessary for the player to utilize Abilities,
- * while also setting up the initial Player State and HUD for the GAS environment.
+ * AGasControllerBase is an **abstract** base Player Controller.
+ * It provides the core functionality for managing the Character and handles **fundamental input mappings**, 
+ * such as basic movement and camera control. This class establishes the foundation 
+ * for common controller responsibilities, allowing derived classes to focus specifically 
+ * on Gameplay Ability System (GAS) integration.
  */
-UCLASS()
-class GASABILITIES_API AGasCharacterControllerBase : public APlayerController
+UCLASS(Abstract)
+class GASABILITIES_API AGasControllerBase : public APlayerController
 {
 	GENERATED_BODY()
 
-public:
+protected:
+
+	/// Declare properties
+	
 	// The Input Mapping Context that defines the input scheme for the character.
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = GAS_Input, meta = (AllowPrivateAccess = true))
-	TObjectPtr<UInputMappingContext> CurrentMappingContext;
+	TObjectPtr<UInputMappingContext> MainMappingContext;
 
 	// Reference to the current Gas Character Base controlled by this controller.
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = GAS_Input, meta = (AllowPrivateAccess = true))
@@ -51,6 +54,9 @@ public:
 	TObjectPtr<UInputAction> JumpAction;
 
 public:
+
+	/// Setup
+	
 	// Called to bind functionality to input
 	virtual void SetupInputComponent() override;
 
