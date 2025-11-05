@@ -3,7 +3,6 @@
 #include "GasControllerBase.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
-#include "Core/CharacterBase/GasCharacterBase.h"
 
 // Setup input component
 void AGasControllerBase::SetupInputComponent()
@@ -17,7 +16,7 @@ void AGasControllerBase::SetupInputComponent()
 	EnhancedInputComponent = Cast<UEnhancedInputComponent>(this->InputComponent);
 	if (EnhancedInputComponent == nullptr) return;
 
-	// Bind input actions to their respective handlers
+	/// Bind input actions to their respective handlers
 	
 	// Look - bind to Triggered event
 	EnhancedInputComponent->BindAction(LookAction.Get(), ETriggerEvent::Triggered, this, &AGasControllerBase::Look);

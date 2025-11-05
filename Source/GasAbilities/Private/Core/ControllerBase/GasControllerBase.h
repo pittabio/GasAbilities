@@ -6,9 +6,9 @@
 #include "GameFramework/PlayerController.h"
 #include "InputMappingContext.h"
 #include "InputAction.h"
+#include "Core/GasCharacter.h"
 #include "GasControllerBase.generated.h"
 
-class AGasCharacterBase;
 struct FInputActionValue;
 
 /**
@@ -18,7 +18,7 @@ struct FInputActionValue;
  * for common controller responsibilities, allowing derived classes to focus specifically 
  * on Gameplay Ability System (GAS) integration.
  */
-UCLASS(Abstract)
+UCLASS(Abstract, NotBlueprintable)
 class GASABILITIES_API AGasControllerBase : public APlayerController
 {
 	GENERATED_BODY()
@@ -28,29 +28,29 @@ protected:
 	/// Declare properties
 	
 	// The Input Mapping Context that defines the input scheme for the character.
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = GAS_Input, meta = (AllowPrivateAccess = true))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input Base", meta = (AllowPrivateAccess = true))
 	TObjectPtr<UInputMappingContext> MainMappingContext;
 
 	// Reference to the current Gas Character Base controlled by this controller.
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = GAS_Input, meta = (AllowPrivateAccess = true))
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Input Base", meta = (AllowPrivateAccess = true))
 	TObjectPtr<AGasCharacterBase> CurrentCharacter;
-
+	
 	// The Enhanced Input Component for handling input actions.
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = GAS_Input, meta = (AllowPrivateAccess = true))
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Input Base", meta = (AllowPrivateAccess = true))
 	TObjectPtr<UEnhancedInputComponent> EnhancedInputComponent;
 
 	/// Declare input actions for movement and looking around
 
 	// Input action for looking around
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = GAS_Input, meta = (AllowPrivateAccess = true))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input Base|Actions", meta = (AllowPrivateAccess = true))
 	TObjectPtr<UInputAction> LookAction;
 
 	// Input action for moving
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = GAS_Input, meta = (AllowPrivateAccess = true))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input Base|Actions", meta = (AllowPrivateAccess = true))
 	TObjectPtr<UInputAction> MoveAction;
 
 	// Input action for jumping
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = GAS_Input, meta = (AllowPrivateAccess = true))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input Base|Actions", meta = (AllowPrivateAccess = true))
 	TObjectPtr<UInputAction> JumpAction;
 
 public:
