@@ -59,6 +59,11 @@ All Epic Games content is used under the [Unreal Engine EULA](https://www.unreal
 ### Mixamo
 This project also uses animations from **Mixamo**, a service by Adobe providing free character animations and auto-rigging tools. All Mixamo content is used in accordance with [Adobe’s licensing terms](https://community.adobe.com/t5/mixamo-discussions/mixamo-faq-licensing-royalties-ownership-eula-and-tos/td-p/13234775).
 
+### Kakky
+This project uses visual effects from the [**FX Variety Pack**](https://www.fab.com/listings/53531e17-369f-4bba-b493-8588f0dec07b) by [Kakky](https://www.fab.com/sellers/Kakky), a free asset collection available on the [Fab marketplace](https://www.fab.com/).
+
+All content is used in accordance with Fab's [Standard License](https://www.fab.com/legal/license).
+
 ## 📚 Learning Resources
 > **Note:** Additional resources may be added as the project progresses.
 ###

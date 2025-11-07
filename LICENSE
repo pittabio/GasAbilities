@@ -51,6 +51,7 @@ This project is intended as:
 All third-party content remains the property of its respective owners.
 This project includes content from third-party sources that retain their original licenses and are NOT covered by this license:
 
+
 EPIC GAMES CONTENT:
 • Third Person Template (characters, animations, assets)
 • Starter Content (audio, particles, materials, etc.)
@@ -59,12 +60,25 @@ Licensed under: Unreal Engine EULA https://www.unrealengine.com/en-US/eula/unrea
 
 Note: Epic Games content is NOT redistributable outside Unreal Engine projects and must be obtained directly from Epic Games.
 
+
 MIXAMO CONTENT (Adobe):
 • Character animations
 
 Licensed under: Adobe Mixamo Terms https://community.adobe.com/t5/mixamo-discussions/mixamo-faq/td-p/13234775
 
 Note: Mixamo animations may not be redistributed as standalone assets.
+
+
+FX VARIETY PACK by Kakky:
+• Visual effects and particle systems
+
+Kakky Fab marketplace: https://www.fab.com/sellers/Kakky
+  
+Licensed under: Fab Standard License
+https://www.fab.com/listings/53531e17-369f-4bba-b493-8588f0dec07b
+https://www.fab.com/legal/license
+  
+Note: Fab marketplace assets may only be used within Unreal Engine projects and retain all rights reserved by their creators.
 
 ═══════════════════════════════════════════════════════════════
 
