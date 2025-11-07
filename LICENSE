@@ -1,32 +1,97 @@
 Copyright (c) 2025 Fabio Pittaccio
+All Rights Reserved
 
-This project is distributed exclusively for personal, non-commercial use.
+═══════════════════════════════════════════════════════════════
 
-✅ You are permitted to:
-- Download and view the source code and game content
-- Modify the project locally for personal and private use
+📋 OVERVIEW
 
-❌ You are not permitted to:
-- Redistribute the original or modified project
-- Use the project or its assets for commercial purposes
-- Publish the project on other sites, repositories, or platforms
+This project is a personal portfolio and learning showcase created to demonstrate proficiency with Unreal Engine's Gameplay Ability System (GAS).
+The source code is made publicly available for educational and reference purposes only.
 
-📦 Third-Party Assets:
-This project includes content from Epic Games, Inc.:
-- Third Person Template (characters, animations, and related assets)
-- Starter Content (sample audio, particles, materials, and other assets)
+═══════════════════════════════════════════════════════════════
 
-All Epic Games content is used under the Unreal Engine EULA (https://www.unrealengine.com/en-US/eula/unreal) and is subject to Epic Games' licensing terms.
+✅ PERMITTED USE
 
-Epic Games content included in this project:
-- Is NOT redistributable outside of Unreal Engine projects
-- Retains all rights reserved by Epic Games, Inc.
-- Must be obtained directly from Epic Games (available free with Unreal Engine) if you wish to use it in your own projects
-- Is subject to Epic Games' licensing terms and restrictions
+You are allowed to:
+• View and study the source code
+• Use code snippets as learning references in your own projects
+• Fork the repository for personal study purposes only
+• Link to this repository in articles, tutorials, or educational content upon citation
 
-Any additional third-party assets will be listed in the project documentation and retain their respective licenses.
-These assets are *not redistributable* and retain their original licenses. You must obtain them separately if you wish to use them in your own projects.
+═══════════════════════════════════════════════════════════════
 
-⚠️ License applied to:
-This license applies only to the original code and implementations created by Fabio Pittaccio. 
-It does not grant any rights to use content from Epic Games or other third-party providers.
+❌ RESTRICTIONS
+
+You are NOT permitted to:
+• Copy, redistribute, or republish this project in whole or in substantial part
+• Use this project as a foundation for your own portfolio or commercial work
+• Submit pull requests or modifications (this is a personal showcase)
+• Remove or modify copyright notices and attributions
+• Claim authorship or misrepresent the origin of this work
+• Use any included third-party assets outside their original licensing terms
+
+═══════════════════════════════════════════════════════════════
+
+🎯 SCOPE & INTENT
+
+This license applies to:
+• Original C++ and Blueprint implementations by Fabio Pittaccio
+• Project structure, architecture, and design patterns
+• Custom game logic and GAS implementations
+
+This project is intended as:
+• A demonstration of technical skills for potential employers
+• A learning resource for studying GAS implementation patterns
+• A reference for best practices in Unreal Engine development
+
+═══════════════════════════════════════════════════════════════
+
+📦 THIRD-PARTY CONTENT
+
+All third-party content remains the property of its respective owners.
+This project includes content from third-party sources that retain their original licenses and are NOT covered by this license:
+
+EPIC GAMES CONTENT:
+• Third Person Template (characters, animations, assets)
+• Starter Content (audio, particles, materials, etc.)
+
+Licensed under: Unreal Engine EULA https://www.unrealengine.com/en-US/eula/unreal
+
+Note: Epic Games content is NOT redistributable outside Unreal Engine projects and must be obtained directly from Epic Games.
+
+MIXAMO CONTENT (Adobe):
+• Character animations
+
+Licensed under: Adobe Mixamo Terms https://community.adobe.com/t5/mixamo-discussions/mixamo-faq/td-p/13234775
+
+Note: Mixamo animations may not be redistributed as standalone assets.
+
+═══════════════════════════════════════════════════════════════
+
+⚖️ LEGAL NOTICES
+
+NO WARRANTY:
+This project is provided "AS IS", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement.
+
+LIMITATION OF LIABILITY:
+In no event shall Fabio Pittaccio be liable for any claim, damages, or other liability arising from the use of this project.
+
+═══════════════════════════════════════════════════════════════
+
+📧 CONTACT & PERMISSIONS
+
+For inquiries regarding:
+• Commercial use or licensing
+• Collaboration opportunities
+• Permission requests
+• Questions about implementations
+
+Please open an issue on this repository or contact the author directly.
+
+═══════════════════════════════════════════════════════════════
+
+Repositories: 
+https://github.com/fabio-pitt/GasAbilities 
+https://gitlab.com/fabio-pitt/GasAbilities
+
+Last updated: November 2025
