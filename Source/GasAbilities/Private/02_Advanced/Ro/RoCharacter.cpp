@@ -1,7 +1,7 @@
 ﻿// GasAbilities © 2025 Fabio Pittaccio. All Rights Reserved. Personal, non-commercial use only. See LICENSE and README for details.
 
-#include "02_Advanced/RoCharacter.h"
-#include "02_Advanced/RoAttributeSet.h"
+#include "02_Advanced/Ro/RoCharacter.h"
+#include "02_Advanced/Ro/RoAttributeSet.h"
 #include "GameplayEffect.h"
 #include "GameplayEffectExtension.h"
 #include "Net/UnrealNetwork.h"
