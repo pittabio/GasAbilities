@@ -2,6 +2,7 @@
 
 #include "02_Advanced/Kai/AbilitySystem/KaiAttributeSet.h"
 #include "AbilitySystemComponent.h"
+#include "GameplayEffectExtension.h"
 #include "Net/UnrealNetwork.h"
 
 UKaiAttributeSet::UKaiAttributeSet()
@@ -21,6 +22,34 @@ void UKaiAttributeSet::GetLifetimeReplicatedProps(TArray<class FLifetimeProperty
 	
 	DOREPLIFETIME_CONDITION_NOTIFY(UKaiAttributeSet, Strength, COND_None, REPNOTIFY_Always);
 	DOREPLIFETIME_CONDITION_NOTIFY(UKaiAttributeSet, MaxStrength, COND_None, REPNOTIFY_Always);
+}
+
+// Pre Attribute Change
+void UKaiAttributeSet::PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue)
+{
+	Super::PreAttributeChange(Attribute, NewValue);
+	
+	if (Attribute == GetHealthAttribute())
+	{
+		NewValue = FMath::Clamp(NewValue, 0.0f, GetMaxHealth());
+	}
+}
+
+// Post Attribute Change
+void UKaiAttributeSet::PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData& Data)
+{
+	Super::PostGameplayEffectExecute(Data);
+	
+	if (Data.EvaluatedData.Attribute == GetHealthAttribute())
+	{
+		SetHealth(FMath::Clamp(GetHealth(), 0.f, GetMaxHealth()));
+	}
+	
+	/**
+	 * UAbilityComponent* ASC = Data.EffectSpec.GetContext().GetInstigatorbilitySystemComponent();
+	 * AActor* ASCOwner = ASC->AbilityActorInfo->OwnerActor.Get();
+	 * ASCOwner->GetActorLocation();
+	 */
 }
 
 // HEALTH
