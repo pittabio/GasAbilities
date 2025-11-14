@@ -19,4 +19,5 @@ void AKaiEnemyCharacter::BeginPlay()
 	Super::BeginPlay();
 	
 	AbilitySystemComponent->InitAbilityActorInfo(this, this);
+	GiveDefaultAbilities();
 }

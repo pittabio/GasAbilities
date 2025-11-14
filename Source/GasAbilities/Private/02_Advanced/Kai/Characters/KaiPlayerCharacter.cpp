@@ -25,6 +25,7 @@ void AKaiPlayerCharacter::PossessedBy(AController* NewController)
 	Super::PossessedBy(NewController);
 	
 	InitAbilitySystemComponent();
+	GiveDefaultAbilities();
 }
 
 void AKaiPlayerCharacter::OnRep_PlayerState()
