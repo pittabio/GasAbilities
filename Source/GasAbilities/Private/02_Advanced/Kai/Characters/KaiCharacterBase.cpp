@@ -50,3 +50,29 @@ void AKaiCharacterBase::InitDefaultAttributes() const
 		AbilitySystemComponent->ApplyGameplayEffectSpecToSelf(*SpecHandle.Data.Get());
 	}
 }
+
+// Simple motion
+
+// Handle look input
+void AKaiCharacterBase::Look(const FVector2d LookAxisVector)
+{
+	// Add yaw and pitch input to the current character's controller
+	this->AddControllerYawInput(LookAxisVector.X);
+	this->AddControllerPitchInput(LookAxisVector.Y);
+}
+
+// Handle move input
+void AKaiCharacterBase::Move(const FVector2d MovementVector)
+{
+	// Get the control rotation and isolate the yaw component
+	const FRotator Rotation = this->GetControlRotation();
+	const FRotator YawRotation(0, Rotation.Yaw, 0);
+
+	// Get the forward and right vectors based on the yaw rotation
+	const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+	const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
+
+	// Add movement input in the forward and right directions
+	this->AddMovementInput(ForwardDirection, MovementVector.Y);
+	this->AddMovementInput(RightDirection, MovementVector.X);
+}

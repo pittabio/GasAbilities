@@ -27,7 +27,7 @@ public:
 	
 	// Attribute Set Getter
 	UKaiAttributeSet* GetAttributeSet() const;
-	
+
 protected:
 	UPROPERTY()
 	TObjectPtr<UKaiAbilitySystemComponent> AbilitySystemComponent;
@@ -47,4 +47,9 @@ protected:
 	TSubclassOf<UGameplayEffect> DefaultAttributeEffect;
 	
 	void InitDefaultAttributes() const;
+	
+public:
+	// Simple motion
+	void Look(FVector2d LookAxisVector);
+	void Move(FVector2d MovementVector);
 };
