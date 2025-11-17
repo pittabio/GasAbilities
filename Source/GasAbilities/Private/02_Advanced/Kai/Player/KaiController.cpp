@@ -33,17 +33,58 @@ void AKaiController::SetupInputComponent()
 void AKaiController::OnPossess(APawn* InPawn)
 {
 	Super::OnPossess(InPawn);
+	
+	UE_LOG(LogTemp, Warning, TEXT("OnPossess - Controller: %s, Pawn: %s, IsLocalController: %s"), 
+		  *GetName(),
+		  InPawn ? *InPawn->GetName() : TEXT("NULL"),
+		  IsLocalController() ? TEXT("TRUE") : TEXT("FALSE"));
+	
+    
+	if (IsLocalController())
+	{
+		GasCharacterBase = Cast<AKaiCharacterBase>(InPawn);
+		
+		UE_LOG(LogTemp, Warning, TEXT("OnPossess: Local Controller %s possessed %s"), 
+			  *GetName(), 
+			  InPawn ? *InPawn->GetName() : TEXT("NULL"));
 
-	// Cast the possessed pawn to AGasCharacterBase and store the reference
-	this->GasCharacterBase = Cast<AKaiCharacterBase>(InPawn);
+		if (MainMappingContext)
+		{
+			if (UEnhancedInputLocalPlayerSubsystem* Subsystem = 
+				ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(GetLocalPlayer()))
+			{
+				if (!Subsystem->HasMappingContext(MainMappingContext.Get()))
+				{
+					Subsystem->AddMappingContext(MainMappingContext.Get(), 0);
+					UE_LOG(LogTemp, Warning, TEXT("Mapping Context added"));
+				}
+			}
+		}
+	}
+}
 
-	// Get the enhanced input local player subsystem
-	const TObjectPtr<UEnhancedInputLocalPlayerSubsystem> InputLocalPlayerSubsystem
-		= ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(this->GetLocalPlayer());
-
-	// Add the current input mapping context to the input subsystem
-	if (InputLocalPlayerSubsystem && MainMappingContext)
-		InputLocalPlayerSubsystem->AddMappingContext(this->MainMappingContext.Get(), 0);
+void AKaiController::BeginPlay()
+{
+	Super::BeginPlay();
+	
+	if (IsLocalController())
+	{
+		GasCharacterBase = Cast<AKaiCharacterBase>(GetPawn());
+		
+		UE_LOG(LogTemp, Warning, TEXT("BeginPlay - Controller: %s, Pawn: %s, IsLocalController: TRUE"), 
+			  *GetName(), 
+			  GasCharacterBase ? *GasCharacterBase->GetName() : TEXT("NULL"));
+		
+		if (MainMappingContext)
+		{
+			if (UEnhancedInputLocalPlayerSubsystem* Subsystem = 
+				ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(GetLocalPlayer()))
+			{
+				Subsystem->AddMappingContext(MainMappingContext.Get(), 0);
+				UE_LOG(LogTemp, Warning, TEXT("Mapping Context added for local controller"));
+			}
+		}
+	}
 }
 
 /// Input action handlers implementation
@@ -51,14 +92,26 @@ void AKaiController::OnPossess(APawn* InPawn)
 // Handle look input
 void AKaiController::Look(const FInputActionValue& Value)
 {
+	if (!GasCharacterBase)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Look called but Character is null!"));
+		return;
+	}
+	
 	// Get the look axis vector from the input value and pass it to the current character
 	const FVector2d LookAxisVector = Value.Get<FVector2d>();
-	this->GasCharacterBase->Look(LookAxisVector);
+	GasCharacterBase->Look(LookAxisVector);
 }
 
 // Handle move input
 void AKaiController::Move(const FInputActionValue& Value)
 {
+	if (!GasCharacterBase)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Look called but GasCharacterBase is null!"));
+		return;
+	}
+	
 	// Get the movement vector from the input value and pass it to the current character
 	const FVector2d MovementVector = Value.Get<FVector2d>();
 	this->GasCharacterBase->Move(MovementVector);
@@ -67,11 +120,23 @@ void AKaiController::Move(const FInputActionValue& Value)
 // Handle jump input start
 void AKaiController::JumpStart()
 {
+	if (!GasCharacterBase)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Look called but GasCharacterBase is null!"));
+		return;
+	}
+	
 	this->GasCharacterBase->Jump();
 }
 
 // Handle jump input stop
 void AKaiController::JumpStop()
 {
+	if (!GasCharacterBase)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Look called but GasCharacterBase is null!"));
+		return;
+	}
+	
 	this->GasCharacterBase->StopJumping();
 }

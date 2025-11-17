@@ -56,6 +56,9 @@ public:
 
 	// Called when the controlled is possessing a pawn
 	virtual void OnPossess(APawn* InPawn) override;
+	
+	// Called at the beginning of play
+	virtual void BeginPlay() override;
 
 	/// Input actions handlers
 
