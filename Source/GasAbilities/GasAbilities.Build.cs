@@ -12,7 +12,8 @@ public class GasAbilities : ModuleRules
 		{
 			"Core", "CoreUObject", "Engine", // Essential Unreal Engine modules
 			"InputCore", "EnhancedInput", // Input handling modules
-			"GameplayAbilities", "GameplayTags", "GameplayTasks" // Gameplay Ability System modules
+			"GameplayAbilities", "GameplayTags", "GameplayTasks", // Gameplay Ability System modules
+			"UMG" // UI module
 		});
 
 		// Uncomment if you are using Slate UI

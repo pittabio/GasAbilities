@@ -3,6 +3,7 @@
 #include "02_Advanced/Kai/Characters/KaiPlayerCharacter.h"
 #include "02_Advanced/Kai/AbilitySystem/KaiAbilitySystemComponent.h"
 #include "02_Advanced/Kai/Player/KaiPlayerState.h"
+#include "02_Advanced/Kai/UI/KaiHUD.h"
 
 // Sets default values
 AKaiPlayerCharacter::AKaiPlayerCharacter()
@@ -30,6 +31,18 @@ void AKaiPlayerCharacter::PossessedBy(AController* NewController)
 	GiveDefaultAbilities();
 	
 	InitDefaultAttributes();
+	InitHUD();
+}
+
+void AKaiPlayerCharacter::InitHUD()
+{
+	if (const APlayerController* PlayerController = Cast<APlayerController>(GetOwner()))
+	{
+		if (AKaiHUD* KaiHUD = Cast<AKaiHUD>(PlayerController->GetHUD()))
+		{
+			KaiHUD->Init();
+		}
+	}
 }
 
 void AKaiPlayerCharacter::OnRep_PlayerState()
