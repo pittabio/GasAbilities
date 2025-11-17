@@ -14,6 +14,10 @@
 		GAMEPLAYATTRIBUTE_VALUE_SETTER(PropertyName) \
 		GAMEPLAYATTRIBUTE_VALUE_INITTER(PropertyName)
 
+// AttributeSet->GetHealthAttribute().GetNumericValue(AttributeSet)
+#define NUMERIC_VALUE(AttributeSetName, PropertyName) \
+	AttributeSetName->Get##PropertyName##Attribute().GetNumericValue(AttributeSetName)
+
 /**
  * 
  */

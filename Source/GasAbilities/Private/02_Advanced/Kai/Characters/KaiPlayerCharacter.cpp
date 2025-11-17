@@ -36,7 +36,9 @@ void AKaiPlayerCharacter::PossessedBy(AController* NewController)
 
 void AKaiPlayerCharacter::InitHUD()
 {
-	if (const APlayerController* PlayerController = Cast<APlayerController>(GetOwner()))
+	if (!IsLocallyControlled()) return;
+	
+	if (const APlayerController* PlayerController = Cast<APlayerController>(GetController()))
 	{
 		if (AKaiHUD* KaiHUD = Cast<AKaiHUD>(PlayerController->GetHUD()))
 		{
@@ -50,6 +52,7 @@ void AKaiPlayerCharacter::OnRep_PlayerState()
 	Super::OnRep_PlayerState();
 	
 	InitAbilitySystemComponent();
-	
 	InitDefaultAttributes();
+	
+	InitHUD();
 }
