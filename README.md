@@ -1,13 +1,16 @@
-# Gas Abilities
+# Gas Abilities 
 An experimental project for exploring Unreal Engine's **Gameplay Ability System (GAS)** and advanced code implementations.
 
-**Project Status:** 🚧 In Active Development
+**Project Status:** \
+✅ Part 1: Learning - Complete \
+🚧 Part 2: Advanced - Polish Phase \
+📅 Part 3: Production - Planned
+
+---
 
 ## 📋 Description
 GasAbilities is a learning and research project created to explore and master the Gameplay Ability System through practical examples. 
 Built in Unreal Engine 5.6 using C++ and Blueprints, the project features a simple testing environment with basic enemies to experiment with various GAS implementations.
-
----
 
 ## 🎯 Objectives
 - Experiment with the Gameplay Ability System
@@ -15,7 +18,7 @@ Built in Unreal Engine 5.6 using C++ and Blueprints, the project features a simp
 - Create a reference repository for future GAS implementations
 - Build a collection of working examples for practical use
 
-### 💭 Purpose
+## 💭 Purpose
 
 This repository serves as:
 - A personal learning journey through GAS
@@ -50,16 +53,25 @@ The initial exploration phase where I learned GAS basics through rapid prototypi
 
 ### 📚 Part 2: Advanced (`02_Advanced/`)
 **Focus**: Deep Dive & Mastery \
-**Status**: In Active Development 🚧
+**Status**: Core Implementation Complete ✅ | Polish & Features In Progress 🚧
 
 **Tech Stack**: ~80% C++, ~20% Blueprint (design iteration only)
 
-**Learning Goals**:
+**Core Achievements**:
 - Scalable and modular architecture patterns
 - Production-ready code organization
 - Advanced GAS features and best practices
 - Performance optimization techniques
 - Clean separation of concerns
+- Multiple implementation approaches (Ro and Kai tutorials)
+
+**Planned Additions**:
+- Skill bar UI system
+- Additional ability demonstrations
+- Further polish and refinements
+
+**Implementation Notes**:
+This phase includes two complete implementations following different tutorial approaches, demonstrating versatility in applying GAS concepts and comparing different architectural patterns.
 
 ### 🎮 Part 3: Production (`03_Production/`)
 **Focus**: Full-Scale Implementation \
@@ -72,6 +84,42 @@ Future phase where all learned concepts will be applied to a complete game proje
 - **MOBA Style**: Character roster, lane system, jungle camps, team abilities
 
 **Tech Stack**: ~90% C++, ~10% Blueprint (content only)
+
+---
+
+## 📂 Repository Structure
+
+### Branch Organization
+This repository documents the entire learning journey through Git branches:
+
+**Main Development:**
+- **`main`**: Stable, production-ready code from all completed phases
+- **`advanced/ro`**: Part 2 implementation following Code With Ro's patterns (merged to main)
+- **`advanced/kai`**: Part 2 implementation following Dev Kai's approach (merged to main)
+
+> 💡 **Learning Approach**: \
+> Part 1 used a branch-per-feature strategy for rapid experimentation and isolated testing. \
+> Part 2 adopted a more structured approach with comprehensive tutorial-based branches.
+
+**Part 1 - Experimental Branches** (Feature Testing): \
+These branches represent the iterative learning process during the fundamentals phase:
+- `ability/fire-blueprint`, `ability/fireball`: Ability system experiments
+- `stats/heal`, `stats/heal-GMMC`, `stats/init`: Attribute and stats testing
+- `test/ability-cast-player`, `test/attribute-blueprint`, `test/debug`, `test/simple-ability`: Various GAS feature tests
+- `Character`: Character system iterations
+- `refactor/character`, `refactor/structure`: Refactor branches to move files and/or folders without using main and breaking something
+
+> 📝 **Note**: Experimental branches from Part 1 are kept for documentation purposes and may contain incomplete or outdated code. They represent the learning process, not final implementations.
+
+**Part 2: Dual Implementation Approach** \
+The advanced phase features **two complete implementations** of the same concepts:
+- **Ro Implementation** (`advanced/ro`): Based on [Ultimate Intro to GAS](https://www.youtube.com/watch?v=Ymxfn1OlNN0) tutorial
+- **Kai Implementation** (`advanced/kai`): Based on [GAS Step by Step](https://www.youtube.com/watch?v=L-3ifQRpyB4) tutorial
+
+[]()
+Both implementations are in `main` and demonstrate different valid architectural patterns for production-ready GAS systems.
+
+---
 
 ## 🗺️ Progress Overview - Roadmap
 ```
@@ -111,13 +159,14 @@ Future phase where all learned concepts will be applied to a complete game proje
   <code>Git</code> <code>GitKraken Desktop</code>
 </div>
 
+---
+
 ## 📦 Contents
 > **Note:** This section will be updated as the project develops.
 
 ### Epic Games
 This project includes the following third-party content from **Epic Games**:
 - **Third Person Template**: Characters, animations, and related assets from Unreal Engine's Third Person template
-- **Starter Content**: Sample audio, particles, materials, and other assets from Unreal Engine's Starter Content pack
 
 All Epic Games content is used under the [Unreal Engine EULA](https://www.unrealengine.com/en-US/eula/unreal) and is subject to Epic Games' licensing terms.
 
@@ -129,21 +178,60 @@ This project uses visual effects from the [**FX Variety Pack**](https://www.fab.
 
 All content is used in accordance with Fab's [Standard License](https://www.fab.com/legal/license).
 
+---
+
 ## 📚 Learning Resources
 > **Note:** Additional resources may be added as the project progresses.
-###
+
 This project is being developed while studying from various sources (_thanks to_):
 
-- [Code With Ro](https://www.youtube.com/@CodeWithRo) - YouTube channel with extensive GAS tutorials (main learning source)
+### Part 1 - Fundamentals
+- [Code With Ro](https://www.youtube.com/@CodeWithRo) - YouTube channel with extensive GAS tutorials
 - [The Wolf Around](https://www.youtube.com/@TheWolfAround) - YouTube channel, specifically the [Enhanced Input System tutorial](https://www.youtube.com/watch?v=HKX5xJcVDTw)
-- Various forums, documentation, and community resources
+
+### Part 2 - Advanced
+- [Code With Ro](https://www.youtube.com/@CodeWithRo) - [Ultimate Intro to GAS](https://www.youtube.com/watch?v=Ymxfn1OlNN0) (Ro implementation)
+- [Dev Kai](https://www.youtube.com/@DevKaiUnreal) - [Gameplay Ability System - Step by Step](https://www.youtube.com/watch?v=L-3ifQRpyB4) (Kai implementation)
+
+### General Resources
+- Unreal Engine Documentation
+- Various forums and community resources
 
 ---
 
 ## 📝 Development Notes
-This is a learning project, so the code and implementations will evolve as my understanding of GAS improves. 
-Feel free to explore, learn, and provide feedback!
+
+This is a learning project that demonstrates progressive mastery of GAS. 
+The repository structure reflects the learning journey:
+
+**Part 1**: Experimental branch-per-feature approach for rapid learning and isolated testing  
+**Part 2**: Structured dual-implementation approach comparing different architectural patterns  
+**Part 3**: Planned full-scale production implementation
+
+**Current Focus**: Adding polish features to Part 2 (skill bar UI, additional abilities) before moving to Part 3.
+
+The code showcases evolution from Blueprint prototyping to production-ready C++ implementations. 
+Feel free to explore the various branches to see the learning progression!
+
+> 🔍 **For Employers/Reviewers**: Check `main` branch for the most polished, production-ready code. Experimental branches show the iterative learning process.
+
+---
 
 ## 📄 License
 This project is protected by copyright. My original code and implementations are licensed for personal, non-commercial use only. 
 Third-party content (e.g: Epic Games assets) retains its original licensing. See the [LICENSE](LICENSE) file for complete details.
+
+---
+
+## ❓ FAQ
+
+**Q: Why are there so many branches?**  
+A: Part 1 used a branch-per-feature approach for isolated experimentation. Each branch represents a specific GAS concept being learned and tested. This allowed for rapid iteration without affecting other work.
+
+**Q: Which branches should I look at?**  
+A: For production-ready code, check the `main` branch. For learning progression, explore the various test and feature branches from Part 1.
+
+**Q: What's the difference between `advanced/ro` and `advanced/kai`?**  
+A: Both implement the same advanced GAS concepts but follow different tutorial approaches, demonstrating that multiple valid architectural patterns exist for the same problems.
+
+---
