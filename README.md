@@ -3,7 +3,7 @@ An experimental project for exploring Unreal Engine's **Gameplay Ability System 
 
 **Project Status:** \
 ✅ Part 1: Learning - Complete \
-🚧 Part 2: Advanced - Polish Phase \
+🚧 Part 2: Advanced - Polish Phase - Current branch: minimap \
 📅 Part 3: Production - Planned
 
 ---
@@ -63,11 +63,10 @@ The initial exploration phase where I learned GAS basics through rapid prototypi
 - Advanced GAS features and best practices
 - Performance optimization techniques
 - Clean separation of concerns
-- Multiple implementation approaches (Ro and Kai tutorials)
+- Multiple implementation approaches
 
 **Planned Additions**:
-- Skill bar UI system
-- Additional ability demonstrations
+- Mini-Map implementation
 - Further polish and refinements
 
 **Implementation Notes**:
@@ -96,6 +95,7 @@ This repository documents the entire learning journey through Git branches:
 - **`main`**: Stable, production-ready code from all completed phases
 - **`advanced/ro`**: Part 2 implementation following Code With Ro's patterns (merged to main)
 - **`advanced/kai`**: Part 2 implementation following Dev Kai's approach (merged to main)
+- **`minimap`** (current): Feature branch for adding minimap functionality to Part 2
 
 > 💡 **Learning Approach**: \
 > Part 1 used a branch-per-feature strategy for rapid experimentation and isolated testing. \
