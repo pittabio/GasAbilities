@@ -3,7 +3,7 @@ An experimental project for exploring Unreal Engine's **Gameplay Ability System 
 
 **Project Status:** \
 ✅ Part 1: Learning - Complete \
-🚧 Part 2: Advanced - Polish Phase - Current branch: minimap \
+🚧 Part 2: Advanced - Polish Phase \
 📅 Part 3: Production - Planned
 
 ---
@@ -64,9 +64,9 @@ The initial exploration phase where I learned GAS basics through rapid prototypi
 - Performance optimization techniques
 - Clean separation of concerns
 - Multiple implementation approaches
+- Comprehensive HUD integration (mini-map, skill bar, cooldowns, resource display)
 
 **Planned Additions**:
-- Mini-Map implementation
 - Further polish and refinements
 
 **Implementation Notes**:
@@ -93,13 +93,10 @@ This repository documents the entire learning journey through Git branches:
 
 **Main Development:**
 - **`main`**: Stable, production-ready code from all completed phases
-- **`advanced/ro`**: Part 2 implementation following Code With Ro's patterns (merged to main)
-- **`advanced/kai`**: Part 2 implementation following Dev Kai's approach (merged to main)
-- **`minimap`** (current): Feature branch for adding minimap functionality to Part 2
 
-> 💡 **Learning Approach**: \
-> Part 1 used a branch-per-feature strategy for rapid experimentation and isolated testing. \
-> Part 2 adopted a more structured approach with comprehensive tutorial-based branches.
+> 💡 **Learning Approach** \
+> **Part 1** used a branch-per-feature strategy for rapid experimentation and isolated testing. \
+> **Part 2** adopted a more structured approach with comprehensive tutorial-based branches.
 
 **Part 1 - Experimental Branches** (Feature Testing): \
 These branches represent the iterative learning process during the fundamentals phase:
@@ -109,15 +106,15 @@ These branches represent the iterative learning process during the fundamentals 
 - `Character`: Character system iterations
 - `refactor/character`, `refactor/structure`: Refactor branches to move files and/or folders without using main and breaking something
 
-> 📝 **Note**: Experimental branches from Part 1 are kept for documentation purposes and may contain incomplete or outdated code. They represent the learning process, not final implementations.
+> 📝 **Note** \
+> Experimental branches from Part 1 are kept for documentation purposes and may contain incomplete or outdated code. They represent the learning process, not final implementations.
 
-**Part 2: Dual Implementation Approach** \
-The advanced phase features **two complete implementations** of the same concepts:
-- **Ro Implementation** (`advanced/ro`): Based on [Ultimate Intro to GAS](https://www.youtube.com/watch?v=Ymxfn1OlNN0) tutorial
-- **Kai Implementation** (`advanced/kai`): Based on [GAS Step by Step](https://www.youtube.com/watch?v=L-3ifQRpyB4) tutorial
+**Part 2 - Advanced Branches** \
+The advanced phase features **two complete implementations** of the same concepts and other features:
+- `advanced/ro`, `advanced/kai`: Follow different tutorial approaches to implement advanced GAS features
+- `minimap`: Current feature branch for adding minimap functionality
 
-[]()
-Both implementations are in `main` and demonstrate different valid architectural patterns for production-ready GAS systems.
+Those implementations are merged in `main` and demonstrate different valid architectural patterns for production-ready GAS systems.
 
 ---
 
@@ -162,7 +159,8 @@ Both implementations are in `main` and demonstrate different valid architectural
 ---
 
 ## 📦 Contents
-> **Note:** This section will be updated as the project develops.
+> 📝 **Note** \
+> This section will be updated as the project develops.
 
 ### Epic Games
 This project includes the following third-party content from **Epic Games**:
@@ -174,14 +172,14 @@ All Epic Games content is used under the [Unreal Engine EULA](https://www.unreal
 This project also uses animations from **Mixamo**, a service by Adobe providing free character animations and auto-rigging tools. All Mixamo content is used in accordance with [Adobe’s licensing terms](https://community.adobe.com/t5/mixamo-discussions/mixamo-faq-licensing-royalties-ownership-eula-and-tos/td-p/13234775).
 
 ### Kakky
-This project uses visual effects from the [**FX Variety Pack**](https://www.fab.com/listings/53531e17-369f-4bba-b493-8588f0dec07b) by [Kakky](https://www.fab.com/sellers/Kakky), a free asset collection available on the [Fab marketplace](https://www.fab.com/).
-
+This project uses visual effects from the [**FX Variety Pack**](https://www.fab.com/listings/53531e17-369f-4bba-b493-8588f0dec07b) by [Kakky](https://www.fab.com/sellers/Kakky), a free asset collection available on the [Fab marketplace](https://www.fab.com/). \
 All content is used in accordance with Fab's [Standard License](https://www.fab.com/legal/license).
 
 ---
 
 ## 📚 Learning Resources
-> **Note:** Additional resources may be added as the project progresses.
+> 📝 **Note** \
+> Additional resources may be added as the project progresses.
 
 This project is being developed while studying from various sources (_thanks to_):
 
@@ -213,7 +211,8 @@ The repository structure reflects the learning journey:
 The code showcases evolution from Blueprint prototyping to production-ready C++ implementations. 
 Feel free to explore the various branches to see the learning progression!
 
-> 🔍 **For Employers/Reviewers**: Check `main` branch for the most polished, production-ready code. Experimental branches show the iterative learning process.
+> 🔍 **For Employers/Reviewers** \
+> Check `main` branch for the most polished, production-ready code. Experimental branches show the iterative learning process.
 
 ---
 
