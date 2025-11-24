@@ -15,7 +15,7 @@ class USpringArmComponent;
  * This class provides the foundational architecture and replication setup for Characters, 
  * ensuring derived classes can seamlessly integrate the Gameplay Ability System.
  */
-UCLASS(Abstract, NotBlueprintable)
+UCLASS()
 class GASABILITIES_API AGasCharacterBase : public ACharacter
 {
 	GENERATED_BODY()
