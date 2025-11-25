@@ -190,6 +190,7 @@ This project is being developed while studying from various sources (_thanks to_
 ### Part 2 - Advanced
 - [Code With Ro](https://www.youtube.com/@CodeWithRo) - [Ultimate Intro to GAS](https://www.youtube.com/watch?v=Ymxfn1OlNN0) (Ro implementation)
 - [Dev Kai](https://www.youtube.com/@DevKaiUnreal) - [Gameplay Ability System - Step by Step](https://www.youtube.com/watch?v=L-3ifQRpyB4) (Kai implementation)
+- [Kibibyte](https://www.youtube.com/@kibibytecompany) - Replicated basic minimap [Part 1](https://www.youtube.com/watch?v=HSwDe-2HvFA)
 
 ### General Resources
 - Unreal Engine Documentation
