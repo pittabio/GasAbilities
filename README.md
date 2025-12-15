@@ -19,7 +19,6 @@ Built in Unreal Engine 5.6 using C++ and Blueprints, the project features a simp
 - Build a collection of working examples for practical use
 
 ## 💭 Purpose
-
 This repository serves as:
 - A personal learning journey through GAS
 - A reference for implementing GAS features
@@ -29,13 +28,14 @@ This repository serves as:
 ## 🔗 Related Projects
 This project is part of a learning series focused on Unreal Engine systems:
 - **GasAbilities** (this repo): Gameplay Ability System ✅
-  - [GitHub](https://github.com/fabio-pitt/GasAbilities) / [GitLab](https://gitlab.com/fabio-pitt/GasAbilities)
+  - [GitHub](https://github.com/pittabio/GasAbilities) / [GitLab](https://gitlab.com/pittabio/GasAbilities)
 - **StateTreeAI** (in progress): State Trees, AI behaviors, and Quest System 🚧
-  - [GitHub](https://github.com/fabio-pitt/StateTreeAI) / [GitLab](https://gitlab.com/fabio-pitt/StateTreeAI)
+  - [GitHub](https://github.com/pittabio/StateTreeAI) / [GitLab](https://gitlab.com/pittabio/StateTreeAI)
 - **Future Integration** (planned): Full-scale project combining GAS, State Trees, and advanced AI 📅
 
 > 💡 **Learning Path** \
 > Each system is mastered in isolation before integration. This approach ensures deep understanding and creates reusable reference implementations.
+
 ---
 
 ## 🗺️ Project Phases
@@ -213,7 +213,6 @@ This project is being developed while studying from various sources (_thanks to_
 ---
 
 ## 📝 Development Notes
-
 This is a learning project that demonstrates progressive mastery of GAS. 
 The repository structure reflects the learning journey:
 
